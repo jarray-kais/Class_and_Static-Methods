@@ -4,6 +4,7 @@ class BankAccount:
     def __init__(self, int_rate, balance): 
         self.balance = balance
         self.int_rate=int_rate
+        BankAccount.accounts.append(self)
     #Add a deposit method to the BankAccount class: increases the account balance by the given amount
     def deposit(self, amount):
         self.balance+= amount
